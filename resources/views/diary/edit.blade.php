@@ -1,8 +1,8 @@
 <x-diary>
     <div class="max-w-6xl ml-auto mr-auto overflow-hidden bg-white rounded-lg shadow-md my-6 py-8">
-        {{-- <a type="button" href="{{ route('index') }}" class="bg-white rounded-lg hover:bg-gray-100 duration-300 transition-colors border px-8 py-2.5 m-6 cursor-pointer">
+        <a type="button" href="{{ route('show', ['id' => $post->id]) }}" class="bg-white rounded-lg hover:bg-gray-100 duration-300 transition-colors border px-8 py-2.5 m-6 cursor-pointer">
             戻る
-        </a> --}}
+        </a>
         <form action="{{ route('update', $post->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <fieldset>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="flex justify-center">
                     <button type="submit" class="bg-white rounded-lg hover:bg-gray-100 duration-300 transition-colors border px-8 py-2.5 m-6 cursor-pointer">
-                        編集
+                        完了
                     </button>
                 </div>
             </fieldset>

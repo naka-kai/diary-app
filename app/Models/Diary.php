@@ -19,7 +19,7 @@ class Diary extends Model
     protected $table = 'diaries';
 
     public function getData() {
-        $data = DB::table($this->table)->simplePaginate(5);
+        $data = Diary::orderBy('created_at', 'desc')->simplePaginate(5);
         return $data;
     }
 }
