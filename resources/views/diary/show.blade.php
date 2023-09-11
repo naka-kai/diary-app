@@ -1,6 +1,6 @@
 <x-diary>
     <div class="max-w-6xl ml-auto mr-auto overflow-hidden bg-white rounded-lg shadow-md my-6">
-        <a type="button" onclick="history.back()" class="bg-white rounded-lg hover:bg-gray-100 duration-300 transition-colors border px-8 py-2.5 m-6 cursor-pointer">
+        <a type="button" href="{{ route('index') }}" class="bg-white rounded-lg hover:bg-gray-100 duration-300 transition-colors border px-8 py-2.5 m-6 cursor-pointer">
             戻る
         </a>
         <div class="block mt-2 text-3xl font-semibold text-gray-800 transition-colors duration-300 transform mb-6 px-6" tabindex="0" role="link">{{ $post->title }}</div>
